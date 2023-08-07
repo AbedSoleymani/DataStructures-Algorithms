@@ -95,12 +95,17 @@ We will start with a very general structure—a _collection_. Collections:
 **</ins>Linked list</ins>**: A linked list is a linear data structure used in computer science and programming to organize and store a collection of elements. Unlike arrays, which use a contiguous block of memory to store elements, linked lists use a series of interconnected nodes, where each node contains both the data and a reference (or pointer) to the next node in the sequence.<br>
 Each node in a linked list consists of two main components:
 * Data: This is the value or information that you want to store in the linked list, such as an integer, string, object, etc.
-* Next Pointer: This is a reference or pointer to the next node in the sequence. It establishes the linkage between nodes and defines the order of elements in the linked list.
+* Next Pointer: This is a reference or pointer to the next node in the sequence. It establishes the linkage between nodes and defines the order of elements in the linked list. In an array, we have the index of that data instead.
 
 The last node in a linked list typically has a "null" or "None" reference as its next pointer, indicating the end of the list.
 
 Linked lists are useful in scenarios where dynamic resizing, frequent insertions and deletions, or efficient memory usage are important. They can be more flexible than arrays but might have slightly higher memory overhead due to the need for storing pointers.
-<br>
-<br>
+
+We also have three different variations of linked list.
+* Singly linked list: Each node contains data and a reference to the next node. It only allows traversal in one direction, from the head (start) to the tail (end).
+* Doubly linked list: Each node contains data and references to both the next and previous nodes. This enables bidirectional traversal.
+* Circular linked list: Similar to a singly or doubly linked list, but the last node's next pointer points back to the first node, creating a circular structure.
+
+<br>wef
 <br>
 <br>
