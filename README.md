@@ -51,13 +51,55 @@ def say_hello(n):
     for i in range(n):
         print("Hello!")
 ```
-<br>As the input to an algorithm increases, the time required to run the algorithm may also increase.
+<br>As the input to an algorithm increases, the time required to run the algorithm may also increase. In technical words, the complexity of this code is $O(n)$: linear rate of increase.<br>
+Similarly, the complexity of this code
+```
+def say_hello(n):
+    for i in range(n):
+        for i in range(n):
+            print("Hello!")
+```
+is $O(n^2)$: quadratic rate of increase.<br>
+Notice that if $n$ is very small, it doesn't really matter which function we use—but as we put in larger values for $n$, the function with the nested loop will quickly become far less efficient (please see the diagram below).<br><br><br>
+<img width="514" alt="Screenshot 2023-08-06 at 6 01 07 PM" src="https://github.com/AbedSoleymani/DataStructures-Algorithms/assets/72225265/038d077c-ec12-4a54-9ad7-d4424b613e28">
 <br>
-![Alt text](../../../../borna/Downloads/00-all-comparison-computational-complexity-2.svg)
-<br>
-<br>
-<br>
-<br>
+The rate of increase of an algorithm is also referred to as the _order_ of the algorithm. For such important concept, mathematicians developed a form of notation called big $O$ notation.<br>
+The choice of data structures also play a crucial role in determining the efficiency and complexity of algorithms and code which we will discuss in the following section.
+
+## Data structures
+The choice of the right data structure for a specific problem can significantly impact the performance and resource usage of your code. Moreover, good choice of data structure can impact the readability and maintainability of your code. Using an appropriate data structure makes the code easier to understand and reduces the chances of errors.<br>
+Data structures are like storage units that arrange and group information in various manners. Whenever you create a program to tackle a task, data is inevitably involved. The manner in which you organize or arrange this data in the computer's memory can greatly influence the range of operations you can perform with it and how smoothly and effectively you can carry out those operations.
+
+We will start with a very general structure—a _collection_. Collections:
+* Don't have a particular order (so you can't say "give me the 3rd element in this collection")
+* Don't have to have objects of the same type
+
+<br>Here are several examples of collections: lists, arrays, linked lists, stacks, queues, sets, maps (dictionaries), trees, and graphs.
+
+**Lists**: have an order (so you can say things like "give me the 3rd item in the list") and they have no fixed length (you can add or remove elements).
+
+**Arrays**: have some things in common with lists. In both cases, there is a collection of items and the items have an order to them. But they have some differences in terms of their properties, behavior, and usage.
+* _Fixed vs. Dynamic Size_:
+    * Arrays: Arrays have a fixed size, meaning you need to specify the size when creating them. Once created, the size cannot be changed.
+    * Lists: Lists have a dynamic size, meaning you can add or remove elements without specifying an initial size. They can grow or shrink as needed.
+* _Memory Allocation_:
+    * Arrays: Arrays are often allocated a contiguous block of memory, which can make them more memory-efficient in terms of memory overhead.
+    * Lists: Lists may use more memory due to their dynamic nature, as they might allocate extra space for potential growth.
+* _Performance_:
+    * Arrays: Accessing elements in an array is generally faster due to their fixed memory layout and direct indexing.
+    * Lists: Accessing elements in a list might be slightly slower compared to arrays, especially when using sequential searching or when the list has to be resized.
+* _Insertions and Deletions_:
+    * Arrays: Inserting or deleting elements in the middle of an array can be inefficient, as it might require shifting elements to make space or close gaps.
+    * Lists: Lists handle insertions and deletions more efficiently since they are designed for dynamic resizing.
+
+**</ins>Linked list</ins>**: A linked list is a linear data structure used in computer science and programming to organize and store a collection of elements. Unlike arrays, which use a contiguous block of memory to store elements, linked lists use a series of interconnected nodes, where each node contains both the data and a reference (or pointer) to the next node in the sequence.<br>
+Each node in a linked list consists of two main components:
+* Data: This is the value or information that you want to store in the linked list, such as an integer, string, object, etc.
+* Next Pointer: This is a reference or pointer to the next node in the sequence. It establishes the linkage between nodes and defines the order of elements in the linked list.
+
+The last node in a linked list typically has a "null" or "None" reference as its next pointer, indicating the end of the list.
+
+Linked lists are useful in scenarios where dynamic resizing, frequent insertions and deletions, or efficient memory usage are important. They can be more flexible than arrays but might have slightly higher memory overhead due to the need for storing pointers.
 <br>
 <br>
 <br>
