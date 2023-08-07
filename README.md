@@ -106,6 +106,63 @@ We also have three different variations of linked list.
 * Doubly linked list: Each node contains data and references to both the next and previous nodes. This enables bidirectional traversal.
 * Circular linked list: Similar to a singly or doubly linked list, but the last node's next pointer points back to the first node, creating a circular structure.
 
-<br>wef
+**Stacks**: A stack is a linear data structure in computer science that follows the Last-In-First-Out (LIFO) principle. This means that the last element added to the stack is the first one to be removed. Think of it like a stack of plates – you can only add or remove plates from the top of the stack.
+
+A stack has two primary operations:
+* Push: This operation adds an element to the top of the stack.
+* Pop: This operation removes and returns the element from the top of the stack.
+
+The stack is commonly used for managing function calls and local variables in programming, as well as for solving problems involving backtracking, parsing expressions, and more. Stack is useful when the most recently seen elements matters (e.g., news feed) or when the order which you see the elements matters.
+
+**Queue**: A queue is a linear data structure in computer science that follows the First-In-First-Out (FIFO) principle (opposite of stack!). In a queue, elements are added at the rear (also known as the "back" or "tail") and removed from the front (also known as the "front" or "head"). Think of it like a queue of people waiting in line – the first person to join the queue is the first one to be served.
+
+A queue has two primary operations:
+* Enqueue (Push): This operation adds an element to the rear of the queue.
+* Dequeue (Pop): This operation removes and returns the element from the front of the queue.
+
+In addition to enqueue and dequeue, there is often an operation called "Peek" or "Front," which allows you to view the element at the front of the queue without removing it.<br>
+Queues are commonly used in scenarios where tasks need to be processed in the order they were added, such as task scheduling, breadth-first search algorithms, print spooling, and more.
+
+**Deque**: A deque (short for "double-ended queue") is a versatile and linear data structure that allows you to add and remove elements from both ends with constant-time complexity. _It can be thought of as a hybrid between a stack and a queue_, providing the functionality of both while maintaining efficient operations at both ends.
+<br>
+A deque supports the following basic operations:
+<br>
+1. Append/Enqueue: Add an element to the back of the deque.
+2. Appendleft: Add an element to the front of the deque.
+3. Pop: Remove and return an element from the back of the deque.
+4. Popleft: Remove and return an element from the front of the deque.
+5. Peek/Peekleft: View the element at the back/front of the deque without removing it.
+6. Size: Get the number of elements in the deque.
+
+Deques are particularly useful in scenarios where you need to efficiently add or remove elements from both ends of a collection, such as implementing algorithms that require efficient FIFO and LIFO operations.
+
+Another important feature of deque is that we can set a given max length to that:
+```
+from collections import deque
+my_deque = deque(maxlen=100)
+```
+After reching the `maxlen`, when we append a number, it automatically removes the oldest number in the deque (i.e., automatically does `popleft`). It is very useful when we want a window-like history of our process (i.e., average accuracy of last 100 epochs in learning!)
+
+**Priority queue**: allows you to retrieve elements based on their priority, rather than their insertion order or value. Elements with higher priority are typically dequeued or processed before elements with lower priority.
+Priority queues are often used in scenarios where tasks or items need to be processed in a specific order based on some criteria. They have various applications, including: task scheduling, Dijkstra's algorithm (used to find the shortest path in a graph by selecting nodes with the lowest tentative distance),
+Huffman coding (used in data compression algorithms to encode characters with higher frequencies using shorter codes), $A^*$ search algorithm (a heuristic-based search algorithm that uses a priority queue to explore potential paths in search space).
+
+**Trees**: Trees and linked lists are built upon the concept of linked structures. Both trees and linked lists are hierarchical data structures. consists of nodes connected by edges, where each node contains a value (also called a key) and zero or more child nodes. The topmost node in a tree is called the root, and nodes with no children are called leaves.
+1. Root: The topmost node of the tree, serving as the starting point for traversal.
+2. Node: An element in the tree that contains a value and can have zero or more child nodes.
+3. Parent: A node that has one or more child nodes.
+4. Child: A node that is directly connected to and descended from another node (its parent).
+5. Leaf: A node with no children, often found at the end of branches.
+6. Depth: The distance between a node and the root. The root has a depth of 0.
+7. Height: The length of the longest path from a node to a leaf. The height of the tree is the height of the root.
+
+**Binary Search Tree (BST)**: is a type of binary tree with the added property that for each node:
+* The value of the node's left child (if present) is less than the value of the node itself.
+* The value of the node's right child (if present) is greater than the value of the node itself.
+
+This property makes binary search trees particularly useful for efficient searching, i.e., $\rightarrow O(\log n)$, insertion, and deletion of elements. It ensures that the elements in the tree are ordered in a way that allows for quick access and manipulation.
+
+An _unbalanced_ binary search tree (BST) is a type of binary search tree where the structure of the tree is skewed or imbalanced, meaning that the heights of the subtrees differ significantly. In an unbalanced BST, one subtree (either left or right) can have significantly more nodes than the other subtree, leading to inefficient and suboptimal search and insertion operations, i.e., $\approx O(n)$.
+<br>
 <br>
 <br>
