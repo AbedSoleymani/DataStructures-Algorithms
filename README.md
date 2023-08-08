@@ -163,6 +163,39 @@ Huffman coding (used in data compression algorithms to encode characters with hi
 This property makes binary search trees particularly useful for efficient searching, i.e., $\rightarrow O(\log n)$, insertion, and deletion of elements. It ensures that the elements in the tree are ordered in a way that allows for quick access and manipulation.
 
 An _unbalanced_ binary search tree (BST) is a type of binary search tree where the structure of the tree is skewed or imbalanced, meaning that the heights of the subtrees differ significantly. In an unbalanced BST, one subtree (either left or right) can have significantly more nodes than the other subtree, leading to inefficient and suboptimal search and insertion operations, i.e., $\approx O(n)$.
-<br>
-<br>
-<br>
+
+**Tree traversal**:
+1. Depth First Search (DFS): is a graph traversal algorithm used to explore and search through a graph or tree data structure. It starts at a designated node (often called the "root" or "source" node) and explores as far as possible along each branch before backtracking.
+DFS can be applied to both directed and undirected graphs, and it can be used for various purposes, including searching for a specific node, finding connected components, solving mazes, and more.
+The basic idea behind DFS is to follow these steps:
+    1. Start at the initial node and mark it as visited.
+    2. Explore the first unvisited adjacent node of the current node (if any) by recursively applying DFS to it.
+    3. Repeat step ii for each unvisited neighbor until there are no more unvisited neighbors.
+    4. Backtrack to the previous node and explore any remaining unvisited neighbors.
+    5. Continue this process until all nodes have been visited or the desired condition is met.
+       
+DFS is implemented using either recursion or an explicit stack data structure. The order in which nodes are visited in DFS depends on whether it's implemented using recursion or an iterative approach.
+
+2. Breadth First Search (BFS): is a graph traversal algorithm used in computer science to explore and visit all the nodes (vertices) of a graph in a systematic and level-wise manner. It starts at a given source node and explores its neighbors before moving on to their neighbors and so on. BFS is commonly used to solve problems that involve finding the shortest path between nodes, exploring the connectivity of a graph, and more.
+Here's how BFS works:
+    1. Choose a starting node (often called the "source" node) from which to begin the traversal.
+    2. Place the starting node in a queue.
+    3. While the queue is not empty, do the following:
+        * Dequeue a node from the front of the queue.
+        * Process the node (visit it, perform any required operations).
+        * Enqueue all unvisited neighbors of the dequeued node into the queue.
+    
+    iv.Repeat step 3 until the queue becomes empty.
+
+BFS guarantees that nodes are visited level by level, meaning that all nodes at a certain distance (or "depth") from the source node are visited before moving on to nodes at a greater depth. This property makes BFS particularly useful for finding the shortest path between two nodes in an unweighted graph.
+
+**Hashing**: is a process of converting input data of arbitrary size (such as text, numbers, files, or any other type of data) into a fixed-size value, often represented as a sequence of numbers and letters. The output of this process is called a hash value or hash code. Hashing is used in various computer science applications, including data storage, data retrieval, cryptography, and more.<br>
+Hashing is used to create data structures like hash tables and hash maps, which allow efficient storage and retrieval of data based on a key. This enables faster look-up operations compared to linear search. Moreover, hashing is employed to verify the integrity of data. Even a small change in the data results in a vastly different hash value, making it useful for detecting tampering or errors.<br>
+The downside of hashing is hash collisions, where different inputs produce the same hash value. Collisions can lead to data inconsistencies and negatively impact the performance of hash-based data structures. Moreover, selecting an appropriate hash function for a specific application is critical. An inadequate choice can lead to poor performance, security vulnerabilities, or unexpected behavior.<br>
+A _hash table_, also known as a hash map, is a data structure used in computer science to store and manage key-value pairs for efficient data retrieval and storage. It is designed to provide fast access to values based on their associated keys. The main idea behind a hash table is to use the hash function to compute an index from the key, and then use that index to store or retrieve the value associated with the key. This allows for constant-time average-case complexity for insertion, deletion, and retrieval operations, making hash tables a valuable tool for tasks that involve frequent data access.
+
+**Heaps**: A heap can be visualized as a binary tree where each node has a value and must satisfy the heap property, which can be defined in two ways:
+* Max Heap Property: In a max heap, the value of each node is greater than or equal to the values of its children. The highest-valued element is at the root.
+* Min Heap Property: In a min heap, the value of each node is less than or equal to the values of its children. The lowest-valued element is at the root.
+
+Heaps are primarily used for maintaining a priority queue, which is a data structure that allows efficient access to the element with the highest (max heap) or lowest (min heap) priority. Priority queues are used in various applications, such as scheduling tasks, graph algorithms (like Dijkstra's algorithm), and implementing efficient sorting algorithms like heapsort.
