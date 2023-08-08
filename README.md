@@ -199,3 +199,45 @@ A _hash table_, also known as a hash map, is a data structure used in computer s
 * Min Heap Property: In a min heap, the value of each node is less than or equal to the values of its children. The lowest-valued element is at the root.
 
 Heaps are primarily used for maintaining a priority queue, which is a data structure that allows efficient access to the element with the highest (max heap) or lowest (min heap) priority. Priority queues are used in various applications, such as scheduling tasks, graph algorithms (like Dijkstra's algorithm), and implementing efficient sorting algorithms like heapsort.
+
+## Sorting algorithms
+**Bubble Sort**:
+1. Start at the beginning of the list.
+2. Compare the first two elements. If the first element is larger than the second, swap them.
+3. Move to the next pair of adjacent elements and repeat step 2.
+4. Continue this process for the entire list, repeatedly comparing and swapping adjacent elements until the largest (or smallest, depending on the desired order) element "bubbles" to the end of the list.
+5. After completing one pass through the list, the largest (or smallest) element is in its correct position. Repeat the process for the remaining elements in the list, excluding the last one that is already in its correct position.
+6. Continue this process until the entire list is sorted.
+
+Bubble Sort has a time complexity of $O(n^2)$. Due to its poor time complexity, Bubble Sort is rarely used in practical applications for sorting large datasets
+
+
+Merge Sort is a popular comparison-based sorting algorithm that follows the divide-and-conquer strategy to sort a list or array of elements. It works by recursively dividing the input list into smaller sublists, sorting each sublist, and then merging the sorted sublists to produce the final sorted output. Merge Sort has a stable sort property, meaning that equal elements maintain their relative order after sorting.
+
+**Merge Sort**: can be summarized in the following steps:
+1. Divide: Divide the unsorted list into two halves (sublists) by finding the middle point.
+2. Conquer: Recursively sort each half of the sublist. This step involves repeatedly dividing each sublist into smaller sublists until they contain only one element, which is already sorted.
+3. Merge: Merge the sorted sublists from the previous step to produce a single sorted list. This involves comparing elements from both sublists and placing them in the correct order.
+4. Repeat: Repeat the divide, conquer, and merge steps until the entire list is sorted.
+
+The key advantage of Merge Sort is its consistent time complexity. It guarantees a time complexity of $O(n \log n)$ in the worst, best, and average cases.<br>
+However, Merge Sort does require additional memory to hold the sublists during the merging process. This additional memory consumption makes it less space-efficient compared to some other _in-place_ sorting algorithms.
+
+Quick Sort is a widely used comparison-based sorting algorithm that follows the divide-and-conquer strategy to efficiently sort a list or array of elements. It works by selecting a "pivot" element from the input list, partitioning the list into two sublists – one containing elements less than the pivot and another containing elements greater than the pivot – and then recursively sorting these sublists. Quick Sort is known for its high performance and is often used in practice for sorting large datasets.
+
+**Quick Sort**: can be summarized in the following steps:
+
+1. Pivot Selection: Choose a pivot element from the list. The pivot can be chosen in various ways, such as selecting the first element, the last element, a random element, or using a median-of-three approach.
+2. Partitioning: Rearrange the elements in the list so that all elements less than the pivot are on the left side, and all elements greater than the pivot are on the right side. The pivot itself will be in its correct sorted position.
+3. Recursion: Recursively apply Quick Sort to the left and right sublists created during the partitioning step.
+4. Base Case: The base case of the recursion is when a sublist has only one or zero elements, which is already considered sorted.
+5. Combine: As the recursion unwinds, the sublists will be merged to produce the final sorted list.
+
+Quick Sort is known for its efficient average-case time complexity of $O(n \log n)$. In practice, Quick Sort often outperforms other sorting algorithms like Merge Sort and Heap Sort, especially for small to medium-sized datasets. Its efficiency is due to its ability to partition the list and sort it in place, reducing the amount of memory needed for temporary storage.
+
+However, it's important to note that Quick Sort's worst-case time complexity is $O(n^2)$, which occurs when the pivot selection and partitioning steps consistently result in unbalanced sublists. To mitigate this issue, various optimizations and pivot selection strategies (like the median-of-three approach) are employed to improve the algorithm's performance and avoid worst-case scenarios.
+
+
+
+
+
