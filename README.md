@@ -237,6 +237,45 @@ Quick Sort is known for its efficient average-case time complexity of $O(n \log 
 
 However, it's important to note that Quick Sort's worst-case time complexity is $O(n^2)$, which occurs when the pivot selection and partitioning steps consistently result in unbalanced sublists. To mitigate this issue, various optimizations and pivot selection strategies (like the median-of-three approach) are employed to improve the algorithm's performance and avoid worst-case scenarios.
 
+**Graph**: 
+A graph is a fundamental data structure in computer science used to represent a collection of objects (nodes or vertices) and the connections between them (edges). An example for that is a data base for websites and there likes to eachother. Graphs are widely used to model and solve problems involving relationships, connections, and networks.<br>
+Graphs can also have various applications:
+* Social Networks: Modeling connections between individuals in social media networks.
+* Transportation Networks: Representing routes, roads, and transportation systems.
+* Web Pages and Hyperlinks: Modeling the structure of the World Wide Web.
+* Circuit Design: Representing electronic circuits and their components.
+* Recommendation Systems: Modeling user preferences and item relationships.
+* Data Processing: Representing data dependencies in workflows or processing pipelines.
+
+The components of a graph include:
+
+1. Nodes (Vertices): Nodes represent individual entities or objects in the graph. Each node can have associated attributes or data.
+2. Edges: Edges represent connections or relationships between nodes. Edges can be directed (pointing from one node to another) or undirected (bidirectional). In addition, edges can have weights or labels that represent additional information, such as distances or strengths of connections.
+
+Graphs can be classified into different types based on their characteristics:
+1. Directed Graph (Digraph): A graph where each edge has a specific direction from one node to another. The relationship between nodes is asymmetric.
+2. Undirected Graph: A graph where edges do not have a specific direction. The relationship between nodes is symmetric.
+3. Weighted Graph: A graph where edges have associated weights or values that represent additional information about the connections.
+4. Unweighted Graph: A graph where all edges are considered to have equal weight, and no additional values are associated with the connections.
+5. Cyclic Graph: A graph that contains at least one cycle, which is a sequence of nodes that forms a closed loop.
+6. Acyclic Graph: A graph that does not contain any cycles.
+
+**DAG**: Directed Acyclic Graph. It is a type of graph data structure that consists of nodes (vertices) and directed edges, where each edge has a specific direction and there are no cycles in the graph.
+
+**Knapsack problem**: is a well-known optimization problem in computer science and mathematics. It is a classic example of a combinatorial optimization problem, where the goal is to select a subset of items from a given set, subject to certain constraints, in order to maximize a specified value.
+
+The problem is typically formulated as follows:
+
+You are given a set of items, each with a weight and a value. You have a knapsack with a limited weight capacity. The goal is to select a subset of items to include in the knapsack such that the total weight does not exceed the capacity of the knapsack, and the total value of the selected items is maximized.
+
+There are two main variants of the knapsack problem:
+
+1. 0-1 Knapsack Problem: In this variant, you can either select an item (weight and value) or not select it (binary decision) for inclusion in the knapsack. In other words, you cannot take fractional amounts of items.
+2. Fractional Knapsack Problem: In this variant, you can take fractional amounts of items, which means you can decide to include a fraction of an item's weight and value in the knapsack.
+
+The knapsack problem is NP-hard, which means that there is no known efficient algorithm that can solve it for all possible inputs in polynomial time (i.e., $O(n^2)$ or $O(n)$). However, it can be solved using various optimization techniques, including dynamic programming, greedy algorithms, and branch and bound methods.
+
+One dumb method to solve 0-1 knapsack problem is _Brute Force_ Solution which considers all possible combinations which has the complexity of $O(2^n)$ (polynomial complexity) which $n$ is the total number of objects.
 
 
 
