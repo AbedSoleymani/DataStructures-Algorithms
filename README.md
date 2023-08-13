@@ -278,5 +278,30 @@ The knapsack problem is NP-hard, which means that there is no known efficient al
 One dumb method to solve 0-1 knapsack problem is _Brute Force_ Solution which considers all possible combinations which has the complexity of $O(2^n)$ (polynomial complexity) which $n$ is the total number of objects.
 
 
+## Dynamic Programming
+**Dynamic programming** is a method used in computer science and mathematics to solve problems by breaking them down into smaller subproblems and solving each subproblem only once. The solutions to the subproblems are stored in a table or memoization array, so that they can be reused when needed to solve larger subproblems or the original problem.
+
+It can solve problems in *polynomial time* $O(n^c)$ which a naive approach solves them in *exponential time* $O(c^n)$. As a result, dynamic programming is less or more an optimization technique which optimise the solution. Sometimes we can add some heuristics to reduce the complexity to a *linear* one $O(n)$.
+
+Problems that can be solved by DP should have these properties:
+1. ***Optimal substructure:*** The optimal solution to the problem can be found by combining the optimal solutions to its subproblems. In other words, the optimal solution to the problem can be computed by using the optimal solutions to the subproblems.
+2. ***Overlapping subproblems:***  The problem can be broken down into smaller subproblems, and the solutions to these subproblems are reused to solve the larger problem. These subproblems must overlap, meaning that the same subproblem is solved multiple times.
+3. ***Subproblems can be solved independently:***  The subproblems should be independent of each other, meaning that the solution to one subproblem does not affect the solution to another subproblem.
+
+DP problems fall into two main group:
+1. ***Combinatoric problems*** that want to **count** something:
+    - How many steps needed to get from point A to B
+    - How many ways needed to complete ...
+2. ***Optimization problems*** that want the minimum number of something:
+    - What us the minimum number of steps needed to get from point A to B
+    - What is the minimum number of ways needed to complete ...
+    - What is the mximum profit of buying or selling a stock
+
+The data structure for the dynamic programming buffer can be a _list_ or _dictionary_. The choice depends on several factors, including the specific problem, the nature of the data, and the operations performed on the buffer. List is more memory efficient, faster to search, and simpler, especially when the state space can be represented using sequential indices. Dictionary, on the other hand, is more flexible in associating values with specific keys (states), which can be useful when working with complex and un-ordered state representations (e.g., Q-learning).
+
+There are two main approaches to dynamic programming:
+
+1. Top-Down Approach (Memoization): In this approach, the problem is solved recursively by breaking it down into smaller subproblems. The solutions to these subproblems are stored in a memoization table to avoid redundant calculations.
+2. Bottom-Up Approach (Tabulation): In this approach, the problem is solved iteratively by building up the solution from the bottom (i.e., the smallest subproblems) to the top (i.e., the original problem). The solutions to subproblems are stored in a table as they are computed.
 
 
